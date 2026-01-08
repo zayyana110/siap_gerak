@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "242169687922",
+    "project_id": "siapgerak-v2",
+    "storage_bucket": "siapgerak-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242169687922:android:bbb42da37e5e914e63b7eb",
+        "android_client_info": {
+          "package_name": "com.zayyana.siap_gerak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242169687922-ui35vr0tqin7kipb8ehfn62evj855kcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zayyana.siap_gerak",
+            "certificate_hash": "61ff9277ff8fb170d2cd2f049999dcb49924ba8d"
+          }
+        },
+        {
+          "client_id": "242169687922-0k9fib8oiql6r590censk2ruhpkjko8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0CcPlCccU1iuMk10ze_y8LuQyXkyJzKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242169687922-0k9fib8oiql6r590censk2ruhpkjko8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
