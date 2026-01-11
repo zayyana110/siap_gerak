@@ -1,9 +1,14 @@
-
+// File: android/build.gradle.kts
 
 buildscript {
     repositories {
         google()
         mavenCentral()
+    }
+    dependencies {
+        // ✅ Penulisan yang benar untuk Kotlin DSL
+        classpath("com.android.tools.build:gradle:8.0.2")
+        classpath("com.google.gms:google-services:4.4.2")
     }
 }
 
@@ -11,9 +16,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
     }
 }
+
 
 val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
 rootProject.layout.buildDirectory.value(newBuildDir)
