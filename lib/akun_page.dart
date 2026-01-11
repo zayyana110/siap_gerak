@@ -9,7 +9,12 @@ class AkunPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
-      appBar: AppBar(title: const Text("Pengaturan"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("Pengaturan"),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
       body: ListView(
         children: [
           const SizedBox(height: 20),

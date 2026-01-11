@@ -1,21 +1,17 @@
-// --- BAGIAN INI YANG TADI KURANG ---
+
+
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
-    dependencies {
-        // Ini adalah dependensi agar Android Studio bisa membaca google-services.json
-        // Perhatikan tanda kurung (...) karena ini format Kotlin (.kts)
-        classpath("com.google.gms:google-services:4.4.2") 
-    }
 }
-// ------------------------------------
 
 allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://storage.googleapis.com/download.flutter.io") }
     }
 }
 
@@ -27,7 +23,9 @@ subprojects {
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
 subprojects {
-    project.evaluationDependsOn(":app")
+    if (project.name != "app") {
+        project.evaluationDependsOn(":app")
+    }
 }
 
 tasks.register<Delete>("clean") {

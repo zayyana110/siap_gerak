@@ -44,7 +44,12 @@ class _PomodoroPageState extends State<PomodoroPage> {
     int detik = _sisaWaktu % 60;
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Mode Fokus"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("Mode Fokus"),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -58,8 +63,8 @@ class _PomodoroPageState extends State<PomodoroPage> {
                   child: CircularProgressIndicator(
                     value: _sisaWaktu / (_durasiMenit * 60),
                     strokeWidth: 10,
-                    color: Colors.deepOrange,
-                    backgroundColor: Colors.orange[100],
+                    color: Colors.blue,
+                    backgroundColor: Colors.blue[100],
                   ),
                 ),
                 Text(
@@ -81,7 +86,7 @@ class _PomodoroPageState extends State<PomodoroPage> {
                 max: 120,
                 divisions: 23,
                 label: "${_durasiMenit.round()} menit",
-                activeColor: Colors.deepOrange,
+                activeColor: Colors.blue,
                 onChanged: (val) {
                   setState(() {
                     _durasiMenit = val;
@@ -105,7 +110,7 @@ class _PomodoroPageState extends State<PomodoroPage> {
                 ElevatedButton(
                   onPressed: _isRunning ? null : _mulaiTimer,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Colors.blue,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 40,
                       vertical: 15,
